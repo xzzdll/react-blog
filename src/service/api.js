@@ -27,7 +27,7 @@ axios.interceptors.response.use((res) => {
   return Promise.reject(error);
 });
 
-export function fetch (url, params) {
+export default function fetch (url, params) {
   return new Promise((resolve, reject) => {
     axios.post(url, params)
       .then(response => {
