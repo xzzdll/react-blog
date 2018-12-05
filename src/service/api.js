@@ -39,3 +39,7 @@ export default function fetch (url, params) {
       });
   });
 }
+
+export function articalList(){
+  return fetch('say/list');
+}

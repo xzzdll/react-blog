@@ -1,11 +1,11 @@
 import { takeEvery } from "redux-saga";
 import { put, call } from "redux-saga/effects";
-import api from "../service/api.js";
+import {articalList} from "../service/api.js";
 
 // saga
 function* fetch(action) {
   try {
-    const res = yield call(api, action.payload);
+    const res = yield call(articalList, action.payload);
     yield put({
       type: "list:set",
       payload: res
