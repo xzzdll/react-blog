@@ -17,14 +17,18 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-@connect(mapStateToProps, mapDispatchToProps)
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {}
+  }
 
   fetchList = () => {
     this.props.fetchList(1)
   }
 
   render() {
+    const {list} = this.props
     return (
       <div className="App">
         <header className="App-header">
@@ -40,11 +44,12 @@ class App extends Component {
           >
             Learn React
           </a>
-          <button onClick={this.fetchList}>click</button>
+          <button onClick={this.fetchList}>test</button>
+          <span>{list.message}</span>
         </header>
       </div>
     );
   }
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App)
