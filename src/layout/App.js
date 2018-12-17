@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import logo from './logo.svg';
 import './App.css';
+import Button from 'antd/lib/button';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -32,7 +32,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -44,7 +43,7 @@ class App extends Component {
           >
             Learn React
           </a>
-          <button onClick={this.fetchList}>test</button>
+          <Button type="primary"  onClick={this.fetchList}>test</Button >
           <span>{list.message}</span>
         </header>
       </div>
