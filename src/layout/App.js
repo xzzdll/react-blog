@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import './App.css';
 import Button from 'antd/lib/button';
 import artical from '../pages/artical/index';
-import { Router, Route } from "react-router-dom";
+import { Router, Route, Link } from "react-router-dom";
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -34,6 +34,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+        <Link to="/accounts">首页</Link>
           <Button type="primary"  onClick={this.fetchList}>测试接口</Button >
           <span className="App-link">{list.message}</span>
           <Route path="/accounts" component={artical} />
