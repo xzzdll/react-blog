@@ -4,6 +4,7 @@ const HTMLPlugin = require("html-webpack-plugin");
 
 const common = require("./webpack.common.js");
 const SRC_DIR = path.resolve(__dirname, "../src");
+const DIST_DIR = path.resolve(__dirname, "../dist");
 
 exports = merge(common, {
   mode: 'development',
@@ -21,7 +22,13 @@ exports = merge(common, {
     new HTMLPlugin({
       template: `${SRC_DIR}/index.html`,
     })
-  ]
+  ],
+  output: {
+    path: DIST_DIR,
+    filename: "bundle.js",
+    chunkFilename: "[name].bundle.js",
+    publicPath: '/'
+  },
 });
 
 

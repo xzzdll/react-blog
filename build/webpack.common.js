@@ -2,7 +2,6 @@ const path = require("path");
 //入口
 const SRC_DIR = path.resolve(__dirname, "../src");
 //出口
-const DIST_DIR = path.resolve(__dirname, "../dist");
 const ASSET_DIR = path.resolve(__dirname, "../src/assets");
 
 const { inlineSource } = require('./config');
@@ -39,12 +38,6 @@ const rules = [
 exports = {
   entry: {
     app: `${SRC_DIR}`
-  },
-  output: {
-    path: DIST_DIR,
-    filename: "bundle.js",
-    chunkFilename: inlineSource ? "[name].bundle.js" : "js/[name].js?v=[hash]",
-    publicPath: './'
   },
   resolve: {
     modules: [SRC_DIR, "node_modules"],
