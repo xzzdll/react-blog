@@ -1,7 +1,5 @@
 const path = require("path");
-//入口
 const SRC_DIR = path.resolve(__dirname, "../src");
-//出口
 const ASSET_DIR = path.resolve(__dirname, "../src/assets");
 
 const { inlineSource } = require('./config');
