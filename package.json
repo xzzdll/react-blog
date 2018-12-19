@@ -1,5 +1,5 @@
 {
-  "name": "my-resume",
+  "name": "react-demo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,7 @@
     "redux-saga": "^0.16.0"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --devtool eval --progress --colors --hot --inline ",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --devtool eval --progress --colors --hot --inline ",
     "build": "cross-env NODE_ENV=production webpack"
   },
   "devDependencies": {
