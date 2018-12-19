@@ -1,5 +1,4 @@
-import { takeEvery } from "redux-saga";
-import { put, call } from "redux-saga/effects";
+import { put, call, takeEvery } from "redux-saga/effects";
 import {articalList} from "../service/api.js";
 
 // saga
