@@ -16,7 +16,7 @@ const rules = [
   { test: /\.(scss|css)$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
   {
     test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-    loader: inlineSource ? 'url-loader' : 'file-loader',
+    loader: 'url-loader',
     options: {
       limit: 10000,
       name: "img/[name].[ext]",
@@ -25,8 +25,9 @@ const rules = [
   {
     test: /\.(woff|woff2|eot|ttf|otf)$/,
     use: {
-      loader: inlineSource ? 'url-loader' : 'file-loader',
+      loader: 'url-loader',
       options: {
+        limit: 10000,
         name: "font/[name].[ext]",
       }
     }

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import './App.css';
+import { connect } from 'react-redux';
+import './index.css';
 import Button from 'antd/lib/button';
-import artical from '../pages/artical/index';
-import { Router, Route } from "react-router-dom";
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -14,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     fetchList: (value) => {
-      dispatch({type: 'list:fetchList', payload: value})
+      dispatch({ type: 'list:fetchList', payload: value })
     }
   }
 }
@@ -30,15 +28,9 @@ class App extends Component {
   }
 
   render() {
-    const {list} = this.props
+    const { list } = this.props
     return (
-      <div className="App">
-        <header className="App-header">
-          <Button type="primary"  onClick={this.fetchList}>测试接口</Button >
-          <span className="App-link">{list.message}</span>
-          <Route path="/accounts" component={artical} />
-        </header>
-      </div>
+      <Button type="primary" onClick={this.fetchList}>测试接口22222</Button >
     );
   }
 }
