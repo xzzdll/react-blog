@@ -32,19 +32,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <Button type="primary"  onClick={this.fetchList}>test</Button >
-          <span>{list.message}</span>
+          <Button type="primary"  onClick={this.fetchList}>测试接口</Button >
+          <span className="App-link">{list.message}</span>
         </header>
       </div>
     );
