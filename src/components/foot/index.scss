@@ -1,0 +1,12 @@
+.foot {
+  border-Top: 1px solid #999;
+  padding-Top:15px;
+  padding-bottom:15px;
+
+  .item {
+    display:flex;
+    justify-Content:center;
+    color:#999;
+    font-Size:12px
+  }
+}

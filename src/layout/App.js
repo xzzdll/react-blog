@@ -4,6 +4,7 @@ import './App.css';
 import Button from 'antd/lib/button';
 import artical from '../pages/artical/index';
 import { Router, Route, Link } from "react-router-dom";
+import Foot from '../components/foot';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -39,6 +40,7 @@ class App extends Component {
           <span className="App-link">{list.message}</span>
           <Route path="/accounts" component={artical} />
         </header>
+        <Foot></Foot>
       </div>
     );
   }
