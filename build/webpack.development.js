@@ -14,7 +14,7 @@ exports = merge(common, {
     watchContentBase: true,
     hot: true,
     compress: false,
-    port: 8000,
+    port: 8111,
     clientLogLevel: "none",
     historyApiFallback: true
   },
