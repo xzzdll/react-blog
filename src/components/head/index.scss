@@ -1,0 +1,32 @@
+.foot {
+  border-Top: 1px solid #999;
+  padding-Top:15px;
+  padding-bottom:15px;
+
+  .item {
+    display:flex;
+    justify-Content:center;
+    color:#999;
+    font-Size:12px
+  }
+}
+
+.combined-bar {
+  width: 100%;
+  height: 1px;
+  width: 150px; 
+  transform: translate(0px, 0px);
+  margin-top:30px
+}
+
+.logo {
+  font-size:35px;
+  color:#3493ef;
+  margin-top:6px;
+  font-weight:bold
+}
+
+.menu {
+  margin-top:35px;
+  margin-bottom:6px
+}

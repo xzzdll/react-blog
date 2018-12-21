@@ -5,6 +5,7 @@ import Button from 'antd/lib/button';
 import artical from '../pages/artical/index';
 import { Router, Route, Link } from "react-router-dom";
 import Foot from '../components/foot';
+import Head from '../components/head';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -34,6 +35,7 @@ class App extends Component {
     const {list} = this.props
     return (
       <div className="App">
+       <Head></Head>
         <header className="App-header">
         <Link to="/accounts">首页</Link>
           <Button type="primary"  onClick={this.fetchList}>测试接口</Button >
