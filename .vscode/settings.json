@@ -1,0 +1,41 @@
+{
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    "html",
+    "vue"
+  ],
+  // Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline] ["auto"]
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "auto" // 可以换成上面任意一种value
+    }
+  },
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  // "files.exclude": {
+  //   "**/.git": true,
+  //   "**/.sonarlint": true,
+  //   "**/.svn": true,
+  //   "**/.DS_Store": true,
+  //   "**/node_modules": true,
+  //   "**/iOS": true
+  // },
+  "workbench.activityBar.visible": true,
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "editor.minimap.enabled": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "editor.wordWrap": "on",
+  "sonarlint.ls.javaHome": "E:/Program Files/Java/jre1.8.0_171",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabSize": 2,
+  "terminal.integrated.rendererType": "dom"
+}
