@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { Menu, Icon, Row, Col } from 'antd';
+import {withRouter } from 'react-router';
 
 class Head extends React.Component {
     state = {
-        current: 'mail',
+        current: 'index',
     }
 
     handleClick = (e) => {
-        console.log('click ', e);
         this.setState({
             current: e.key,
         });
+        this.props.history.push(`/${e.key}`);
+    }
+
+    handleClick1 = () => {
+        this.setState({
+            current: 'index',
+        });
+        this.props.history.push(`/index`);
     }
 
     render() {
@@ -20,7 +28,7 @@ class Head extends React.Component {
                 <Row type="flex" justify="center">
                     <Col md={5} xs={24} sm={24} className="hidden-sm-and-down">
                         <div className="combined-bar"></div>
-                        <div className="logo">
+                        <div className="logo" onClick={this.handleClick1}>
                             xzzdll Blog
       </div>
                     </Col>
@@ -30,13 +38,13 @@ class Head extends React.Component {
                             selectedKeys={[this.state.current]}
                             mode="horizontal"
                         >
-                            <Menu.Item key="mail">
-                                <Icon type="mail" />文章
+                            <Menu.Item key="artical">
+                                <Icon type="appstore" />文章
       </Menu.Item>
-                            <Menu.Item key="app">
+                            <Menu.Item key="say">
                                 <Icon type="appstore" />说说
       </Menu.Item>
-                            <Menu.Item key="alipay">
+                            <Menu.Item key="collect">
                                 <Icon type="alipay" />归档
       </Menu.Item>
                         </Menu>
@@ -47,4 +55,5 @@ class Head extends React.Component {
     }
 }
 
-export default Head
+// export default Head
+export default withRouter(Head)
