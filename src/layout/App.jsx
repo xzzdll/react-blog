@@ -52,10 +52,10 @@ class App extends Component {
         <div className="App" style={{ right: this.state.sidebar ? '160px' : '0px', width: '100%' }}>
           <Head></Head>
           <header className="App-header">
-            <Link to="/accounts">首页</Link>
+            {/* <Link to="/accounts">首页</Link>
             <Button type="primary" onClick={this.fetchList}>测试接口</Button >
             <span className="App-link">{list.message}</span>
-            <Route path="/accounts" component={artical} />
+            <Route path="/accounts" component={artical} /> */}
           </header>
           <Foot></Foot>
         </div>
