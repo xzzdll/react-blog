@@ -10,6 +10,7 @@ import './index.css';
 import App from './layout/App';
 import createHashHistory from "history/createHashHistory";
 import root from "./models/index";
+import 'antd/dist/antd.css';
 // import antd  from 'antd';
 
 const history = createHashHistory();
