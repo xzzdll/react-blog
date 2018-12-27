@@ -5,7 +5,6 @@ import { Button, Icon, Row, Col } from 'antd';
 import artical from '../pages/artical/index';
 import say from '../pages/say/index';
 import timeFile from '../pages/time-file/index';
-import index from '../pages/index/index';
 import { Router, Route, Link } from "react-router-dom";
 import Foot from '../components/foot';
 import Head from '../components/head';
@@ -57,7 +56,7 @@ class App extends Component {
           <div className={styles.main}>
           <Row type="flex" justify="center">
           <Col md={14}>
-            <Route path="/index" component={index} />
+            <Route path="/index" component={artical} />
             <Route path="/artical" component={artical} />
             <Route path="/say" component={say} />
             <Route path="/collect" component={timeFile} />
