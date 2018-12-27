@@ -1,0 +1,28 @@
+.articalCard {
+    margin: 10px;
+    margin-left:20px;
+    margin-right:40px;
+    padding: 20px;
+    position: relative;
+    top: -6px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 600px;
+
+    .articalCardBody {
+      text-align: left;
+      font-size: 14px;
+      color: #111111;
+    }
+
+    .date {
+      text-align: right;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.65);
+      color:#999;
+      width:100%
+    }
+  }
