@@ -5,14 +5,14 @@ import Button from 'antd/lib/button';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    list: state.list ? state.list : {}
+    says: state.says ? state.says : {}
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     fetchList: (value) => {
-      dispatch({ type: 'list:fetchList', payload: value })
+      dispatch({ type: 'says:fetchList', payload: value })
     }
   }
 }

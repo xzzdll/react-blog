@@ -40,6 +40,6 @@ export default function fetch (url, params) {
   });
 }
 
-export function articalList(){
+export function says(){
   return fetch('say/list');
 }
