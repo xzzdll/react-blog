@@ -13,7 +13,26 @@ const rules = [
       loader: "babel-loader"
     }
   },
-  { test: /\.(scss|css)$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
+  {
+    test: /\.css$/, use: [
+      'style-loader',
+      'css-loader',
+      'sass-loader'
+    ]
+  },
+  {
+    test: /\.scss$/, use: [
+      'style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          modules: true,
+          importLoaders: 1
+        }
+      },
+      'sass-loader'
+    ]
+  },
   {
     test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
     loader: 'url-loader',

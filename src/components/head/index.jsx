@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './index.scss';
+import styles from './index.scss';
 import { Menu, Icon, Row, Col } from 'antd';
-import {withRouter } from 'react-router';
+import { withRouter } from 'react-router';
 
 class Head extends React.Component {
     state = {
@@ -24,15 +24,15 @@ class Head extends React.Component {
 
     render() {
         return (
-            <div className="head">
+            <div className={styles.head}>
                 <Row type="flex" justify="center">
-                    <Col md={5} xs={24} sm={24} className="hidden-sm-and-down">
-                        <div className="combined-bar"></div>
-                        <div className="logo" onClick={this.handleClick1}>
+                    <Col md={8} xs={24} sm={24}>
+                        <div className={styles.combinedBar}></div>
+                        <div className={styles.logo} onClick={this.handleClick1}>
                             xzzdll Blog
       </div>
                     </Col>
-                    <Col className="menu" md={15} xs={24} sm={24}>
+                    <Col className={styles.menu} md={10} xs={24} sm={24}>
                         <Menu
                             onClick={this.handleClick}
                             selectedKeys={[this.state.current]}

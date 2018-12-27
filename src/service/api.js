@@ -43,3 +43,7 @@ export default function fetch (url, params) {
 export function says(){
   return fetch('say/list');
 }
+
+export function articals(data){
+  return fetch('artical/list',data);
+}

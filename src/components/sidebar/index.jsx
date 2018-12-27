@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.scss';
+import styles from './index.scss';
 import logo from './20180828144419.jpg';
 import { Menu, Icon, Row, Col } from 'antd';
 
@@ -17,33 +17,33 @@ class Head extends React.Component {
 
     render() {
         return (
-            <div className="sideBar">
-                <div className="card" style={{ height: '300px' }}>
+            <div className={styles.sideBar}>
+                <div className={styles.card} style={{ height: '300px' }}>
                     <img src={logo} alt="" />
-                    <div className="word">
-                        <p className="title">xzzdll</p>
+                    <div className={styles.word}>
+                        <p className={styles.title}>xzzdll</p>
                         <p> 前端打字员</p>
                         <p> 文章 - &nbsp;&nbsp;|&nbsp;&nbsp;访问 - </p>
                     </div>
                 </div>
-                <div className="card" style={{ height: '100px' }}>
-                    <div className="card_head">
-                        <span className="title">
+                <div className={styles.card} style={{ height: '100px' }}>
+                    <div className={styles.card_head}>
+                        <span className={styles.title}>
                             FOLLOW ME
         </span>
                     </div>
-                    <div className="icon">
-                        <Icon type="github" className="iconItem" />
-                        <Icon type="qq" className="iconItem" />
+                    <div className={styles.icon}>
+                        <Icon type="github" className={styles.iconItem} />
+                        <Icon type="qq" className={styles.iconItem} />
                     </div>
                 </div>
-                <div className="card">
-                    <div className="card_head">
-                        <span className="title">
+                <div className={styles.card}>
+                    <div className={styles.card_head}>
+                        <span className={styles.title}>
                             友情链接
         </span>
                     </div>
-                    <div className="friendLink">
+                    <div className={styles.friendLink}>
                         <a href="http://laibh.top" target="_blank">赖同学
         </a>
                         <a href="http://i-tech.tech" target="_blank">叶老师

@@ -1,5 +1,3 @@
-@import '~antd/dist/antd.css';
-
 .App {
   text-align: center;
   position: relative;
@@ -7,17 +5,11 @@
   -moz-transition: right 0.5s; /* Firefox 4 */
   -webkit-transition: right 0.5s; /* Safari 和 Chrome */
   -o-transition: right 0.5s; /* Opera */
-}
 
-.App-header {
-  /* background-color: #282c34; */
-  min-height: calc(100vh - 176px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  .main{
+    margin-top: 35px;
+    min-height: calc(100vh - 211px);
+  }
 }
 
 .side {

@@ -1,12 +1,12 @@
 import { put, call, takeEvery } from "redux-saga/effects";
-import {articalList} from "../service/api.js";
+import {articals} from "../service/api.js";
 
 // saga
 function* fetch(action) {
   try {
-    const res = yield call(articalList, action.payload);
+    const res = yield call(articals, action.payload);
     yield put({
-      type: "list:set",
+      type: "articals:set",
       payload: res
     });
   } catch (err) {
@@ -15,16 +15,16 @@ function* fetch(action) {
 }
 
 export default {
-  name: "list",
+  name: "articals",
   reducer: (state = {}, action) => {
     switch (action.type) {
-      case "list:set":
+      case "articals:set":
         return { ...state, ...action.payload };
       default:
         return state;
     }
   },
   saga: function* listWatcher() {
-    yield takeEvery("list:fetchList", fetch);
+    yield takeEvery("articals:fetchList", fetch);
   }
 };

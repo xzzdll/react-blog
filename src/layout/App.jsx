@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './App.scss';
-import { Button, Icon } from 'antd';
+import styles from './App.scss';
+import { Button, Icon, Row, Col } from 'antd';
 import artical from '../pages/artical/index';
 import say from '../pages/say/index';
 import timeFile from '../pages/time-file/index';
@@ -45,27 +45,31 @@ class App extends Component {
     const { list } = this.props
     let button = null;
     if (this.state.sidebar) {
-      button = <Icon type="double-right" className="icon" style={{ color: "#fff" }} />;
+      button = <Icon type="double-right" className={styles.icon} style={{ color: "#fff" }} />;
     } else {
-      button = <Icon type="double-left" className="icon" />;
+      button = <Icon type="double-left" className={styles.icon} />;
     }
 
     return (
       <div>
-        <div className="App" style={{ right: this.state.sidebar ? '160px' : '0px', width: '100%' }}>
+        <div className={styles.App} style={{ right: this.state.sidebar ? '160px' : '0px', width: '100%' }}>
           <Head></Head>
-          <header className="App-header">
+          <div className={styles.main}>
+          <Row type="flex" justify="center">
+          <Col md={14}>
             <Route path="/index" component={index} />
             <Route path="/artical" component={artical} />
             <Route path="/say" component={say} />
             <Route path="/collect" component={timeFile} />
-          </header>
+            </Col>
+            </Row>
+          </div>
           <Foot></Foot>
         </div>
-        <div className="side" style={{ right: this.state.sidebar ? '0' : '-320px' }}>
+        <div className={styles.side} style={{ right: this.state.sidebar ? '0' : '-320px' }}>
           <Siderbar></Siderbar>
         </div>
-        <div className="control" onClick={this.handleClick}>
+        <div className={styles.control} onClick={this.handleClick}>
           {button}
         </div>
       </div>

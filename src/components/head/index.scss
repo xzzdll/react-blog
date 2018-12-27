@@ -1,8 +1,14 @@
 .head {
   background-color: #f5f5f5;
+  :global {
+  .ant-menu {
+    background:unset;
+    border:unset
+  }
+}
 }
 
-.combined-bar {
+.combinedBar {
   width: 100%;
   height: 1px;
   width: 150px; 
@@ -20,9 +26,4 @@
 .menu {
   margin-top:35px;
   margin-bottom:26px
-}
-
-.ant-menu {
-  background:unset;
-  border:unset
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './index.scss';
+import styles from './index.scss';
 import { Timeline, Button } from 'antd';
 
 const mapStateToProps = (state, ownProps) => {
@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   fetchList = () => {
-    this.props.fetchList(1)
+    this.props.fetchList()
   }
 
   componentDidMount() {
@@ -37,12 +37,12 @@ class App extends Component {
     const list = this.props.says.list || []
     return (
       <div>
-        <Timeline pending="Recording..." style={{marginTop:'35px'}}>
+        <Timeline pending="Recording...">
           {list.map((x, index) =>
             <Timeline.Item key={index}>
-              <div className="articalCard">
-                <div className="articalCardBody" dangerouslySetInnerHTML={{ __html: x.content }} ></div>
-                <div className="date">
+              <div className={styles.articalCard}>
+                <div className={styles.articalCardBody} dangerouslySetInnerHTML={{ __html: x.content }} ></div>
+                <div className={styles.date}>
                   发表于：{ x.date }
                 </div>
               </div>
