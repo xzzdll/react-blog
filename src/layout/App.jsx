@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.scss';
-import { Button, Icon} from 'antd';
+import { Button, Icon } from 'antd';
 import artical from '../pages/artical/index';
+import say from '../pages/say/index';
+import timeFile from '../pages/time-file/index';
+import index from '../pages/index/index';
 import { Router, Route, Link } from "react-router-dom";
 import Foot from '../components/foot';
 import Head from '../components/head';
@@ -42,9 +45,9 @@ class App extends Component {
     const { list } = this.props
     let button = null;
     if (this.state.sidebar) {
-      button = <Icon type="double-right" className="icon" style={{ color:"#fff" }}/>;
+      button = <Icon type="double-right" className="icon" style={{ color: "#fff" }} />;
     } else {
-      button = <Icon type="double-left" className="icon"/>;
+      button = <Icon type="double-left" className="icon" />;
     }
 
     return (
@@ -52,10 +55,10 @@ class App extends Component {
         <div className="App" style={{ right: this.state.sidebar ? '160px' : '0px', width: '100%' }}>
           <Head></Head>
           <header className="App-header">
-            {/* <Link to="/accounts">首页</Link>
-            <Button type="primary" onClick={this.fetchList}>测试接口</Button >
-            <span className="App-link">{list.message}</span>
-            <Route path="/accounts" component={artical} /> */}
+            <Route path="/index" component={index} />
+            <Route path="/artical" component={artical} />
+            <Route path="/say" component={say} />
+            <Route path="/collect" component={timeFile} />
           </header>
           <Foot></Foot>
         </div>
