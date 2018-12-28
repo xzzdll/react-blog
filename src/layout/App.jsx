@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styles from './App.scss';
 import { Button, Icon, Row, Col } from 'antd';
-import artical from '../pages/artical/index';
+import index from '../pages/index/index';
 import say from '../pages/say/index';
 import timeFile from '../pages/time-file/index';
 import { Router, Route, Link, IndexRoute, Redirect } from "react-router-dom";
@@ -57,8 +57,8 @@ class App extends Component {
             <Row type="flex" justify="center">
               <Col md={14} sm={24} xs={24}>
               <Redirect to="/index" />
-                <Route  path="/index" component={artical} />
-                <Route path="/artical" component={artical} />
+                <Route  path="/index" component={index} />
+                <Route path="/artical" component={index} />
                 <Route path="/say" component={say} />
                 <Route path="/collect" component={timeFile} />
               </Col>

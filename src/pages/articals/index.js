@@ -44,21 +44,16 @@ class App extends Component {
         {list.map((x, index) =>
           <div className={styles.articalCard} key={index}>
             <div className={styles.articalCardTitle}>{x.title}</div>
-            <div className={styles.articalCardSubTitle}>
-              <span>发表于:{x.date}</span>
-              <span>标签:{x.type}</span>
-              <span>浏览:{x.times}</span>
-            </div>
-            <div className={styles.articalCardBody} dangerouslySetInnerHTML={{ __html: x.content }}>
-            </div>
-            <div>....</div>
-            <div className={styles.articalCardfoot}>
-              <span>阅读全文 > ></span>
+            <div className={styles.articalCardBody}>
+              <div className="ql-snow">
+                <div className="ql-editor">
+                  <div dangerouslySetInnerHTML={{ __html: x.content }}>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
-        {/* <el-pagination v-show="pageShow" :small=true @size-change="handleSizeChange" @current-change="handleCurrentChange" class="z-pagination" :current-page.sync="currentPage" :page-size="pageSize" layout="sizes,prev, pager, next" :total="totalRows">
-        </el-pagination> */}
       </div>
     );
   }
