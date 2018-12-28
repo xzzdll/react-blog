@@ -1,10 +1,11 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import { render } from "react-dom";
-import { Router, Route } from "react-router-dom";
+import { Router, Route,Redirect,IndexRoute} from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
+import artical from './pages/artical/index';
 import './index.css';
 // import 'antd/dist/antd.css'
 import App from './layout/App';
@@ -25,6 +26,7 @@ render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App} >
+      {/* <IndexRoute component={artical} /> */}
       </Route>
     </Router>
   </Provider >,

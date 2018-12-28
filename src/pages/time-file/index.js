@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './index.css';
-import Button from 'antd/lib/button';
+import styles from './index.scss';
+import { Timeline, Button } from 'antd';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    list: state.list ? state.list : {}
+    articals: state.articals ? state.articals : {}
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     fetchList: (value) => {
-      dispatch({ type: 'list:fetchList', payload: value })
+      dispatch({ type: 'articals:fetchList', payload: value })
     }
   }
 }
@@ -20,17 +20,38 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+    }
   }
 
   fetchList = () => {
-    this.props.fetchList(1)
+    this.props.fetchList()
   }
 
+  componentDidMount() {
+    this.fetchList()
+  }
+
+
   render() {
-    const { list } = this.props
+    const list = this.props.articals.list || []
     return (
-      <Button type="primary" onClick={this.fetchList}>测试接口22222</Button >
+      <div>
+        <Timeline pending="Recording...">
+          {list.map((x, index) =>
+            <Timeline.Item key={index}>
+              <div className={styles.articalCard}>
+            <div className={styles.articalCardDate}>
+              {x.date}
+            </div>
+            <div className={styles.articalCardBody}>
+              {x.title}
+            </div>
+          </div>
+            </Timeline.Item>
+          )}
+        </Timeline>
+      </div>
     );
   }
 }

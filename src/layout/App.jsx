@@ -5,7 +5,7 @@ import { Button, Icon, Row, Col } from 'antd';
 import artical from '../pages/artical/index';
 import say from '../pages/say/index';
 import timeFile from '../pages/time-file/index';
-import { Router, Route, Link } from "react-router-dom";
+import { Router, Route, Link, IndexRoute, Redirect } from "react-router-dom";
 import Foot from '../components/foot';
 import Head from '../components/head';
 import Siderbar from '../components/sidebar';
@@ -54,13 +54,14 @@ class App extends Component {
         <div className={styles.App} style={{ right: this.state.sidebar ? '160px' : '0px', width: '100%' }}>
           <Head></Head>
           <div className={styles.main}>
-          <Row type="flex" justify="center">
-          <Col md={14}>
-            <Route path="/index" component={artical} />
-            <Route path="/artical" component={artical} />
-            <Route path="/say" component={say} />
-            <Route path="/collect" component={timeFile} />
-            </Col>
+            <Row type="flex" justify="center">
+              <Col md={14} sm={24} xs={24}>
+              <Redirect to="/index" />
+                <Route  path="/index" component={artical} />
+                <Route path="/artical" component={artical} />
+                <Route path="/say" component={say} />
+                <Route path="/collect" component={timeFile} />
+              </Col>
             </Row>
           </div>
           <Foot></Foot>
