@@ -5,7 +5,7 @@ import { Router, Route,Redirect,IndexRoute} from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
-import artical from './pages/artical/index';
+// import artical from './pages/artical/index';
 import './index.css';
 // import 'antd/dist/antd.css'
 import App from './layout/App';
