@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styles from './index.scss';
 import Button from 'antd/lib/button';
+import {withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -33,6 +34,10 @@ class App extends Component {
     })
   }
 
+  showDetail = (id) => {
+    this.props.history.push(`/detail/${id}`)
+  }
+
   componentDidMount() {
     this.fetchList()
   }
@@ -52,7 +57,7 @@ class App extends Component {
             <div className={styles.articalCardBody} dangerouslySetInnerHTML={{ __html: x.content }}>
             </div>
             <div>....</div>
-            <div className={styles.articalCardfoot}>
+            <div className={styles.articalCardfoot} onClick={(e) => this.showDetail(x._id, e)}>
               <span>阅读全文 > ></span>
             </div>
           </div>
@@ -64,4 +69,4 @@ class App extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))

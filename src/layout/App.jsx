@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import styles from './App.scss';
 import { Button, Icon, Row, Col } from 'antd';
 import index from '../pages/index/index';
+import artical from '../pages/articals/index';
 import say from '../pages/say/index';
 import timeFile from '../pages/time-file/index';
 import { Router, Route, Link, IndexRoute, Redirect } from "react-router-dom";
@@ -59,6 +60,7 @@ class App extends Component {
               <Redirect to="/index" />
                 <Route  path="/index" component={index} />
                 <Route path="/artical" component={index} />
+                <Route path="/detail" component={artical} />
                 <Route path="/say" component={say} />
                 <Route path="/collect" component={timeFile} />
               </Col>
