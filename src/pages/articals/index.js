@@ -29,7 +29,8 @@ class App extends Component {
   fetchList = () => {
     this.props.fetchList({
       currentPage: this.state.currentPage,
-      pageSize: this.state.pageSize
+      pageSize: this.state.pageSize,
+      id:this.props.match.params.id
     })
   }
 

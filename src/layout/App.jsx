@@ -60,7 +60,7 @@ class App extends Component {
               <Redirect to="/index" />
                 <Route  path="/index" component={index} />
                 <Route path="/artical" component={index} />
-                <Route path="/detail" component={artical} />
+                <Route path="/detail/:id" component={artical} />
                 <Route path="/say" component={say} />
                 <Route path="/collect" component={timeFile} />
               </Col>

@@ -7,6 +7,7 @@ import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
 // import artical from './pages/artical/index';
 import './index.css';
+import './quill.snow.css';
 // import 'antd/dist/antd.css'
 import App from './layout/App';
 import createHashHistory from "history/createHashHistory";

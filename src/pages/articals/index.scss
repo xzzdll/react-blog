@@ -3,19 +3,43 @@
   margin-bottom: 50px;
   display: flex;
   padding: 20px;
+  padding-left: 35px;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  cursor: pointer;
 
   .articalCardTitle {
-    margin-bottom: 5px;
-    font-size: 20px;
-    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 26px !important;
+    font-weight: 400 !important;
+    color: rgb(85, 85, 85) !important;
+  }
+
+  .articalCardSubTitle {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #999;
+    line-height: 2;
+
+    span {
+      margin-right:10px
+    }
   }
 
   .articalCardBody {
+    overflow: hidden;
     width: 100%;
-    text-align: center;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.65);
+    text-align: left;
+    font-size: 14px !important;
+    line-height: 2;
+    color: rgb(85, 85, 85) !important;
+  }
+
+  .articalCardfoot {
+    margin-top:20px;
+    color: rgb(85, 85, 85);
+    font-size: 14px !important;
+    line-height: 2;
+    border-bottom: 2px solid rgb(102, 102, 102);
   }
 }
