@@ -6,7 +6,6 @@
   padding-left: 35px;
   flex-direction: column;
   align-items: flex-start;
-  cursor: pointer;
 
   .articalCardTitle {
     margin-bottom: 10px;
@@ -27,12 +26,12 @@
   }
 
   .articalCardBody {
-    overflow: hidden;
+    // overflow: hidden;
     width: 100%;
     text-align: left;
-    font-size: 14px !important;
-    line-height: 2;
-    color: rgb(85, 85, 85) !important;
+    // font-size: 14px !important;
+    // line-height: 2;
+    // color: rgb(85, 85, 85) !important;
   }
 
   .articalCardfoot {

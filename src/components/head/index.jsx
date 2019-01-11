@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
-import { Menu, Icon, Row, Col } from 'antd';
+import { Menu, Icon, Row, Col  } from 'antd';
 import { withRouter } from 'react-router';
 
 class Head extends React.Component {

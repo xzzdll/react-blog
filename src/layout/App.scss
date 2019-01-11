@@ -1,4 +1,5 @@
 .App {
+  height:100%;
   text-align: center;
   position: relative;
   transition: right 0.5s;
@@ -9,6 +10,13 @@
   .main{
     margin-top: 35px;
     min-height: calc(100vh - 211px);
+    height:auto;
+    width:100%;
+    padding-bottom:0;
+    overflow:unset;
+    padding-bottom:0;
+    padding-left:0;
+    padding-right:0;
   }
 }
 
@@ -35,18 +43,5 @@
 
   .icon  {
     font-size:25px;
-  }
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
