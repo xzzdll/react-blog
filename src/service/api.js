@@ -47,3 +47,8 @@ export function says(){
 export function articals(data){
   return fetch('artical/list',data);
 }
+
+export function getVisitorMount(data){
+  return fetch('count/visitor',data);
+}
+
