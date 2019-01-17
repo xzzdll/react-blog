@@ -1,7 +1,7 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import { render } from "react-dom";
-import { Router, Route,Redirect,IndexRoute} from "react-router-dom";
+import { Router, Route, Redirect, IndexRoute, Link } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
@@ -27,7 +27,7 @@ render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App} >
-      {/* <IndexRoute component={artical} /> */}
+        {/* <IndexRoute component={artical} /> */}
       </Route>
     </Router>
   </Provider >,

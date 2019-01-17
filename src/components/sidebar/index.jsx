@@ -3,40 +3,41 @@ import { connect } from 'react-redux';
 import styles from './index.scss';
 import logo from './20180828144419.jpg';
 import { Menu, Icon, Row, Col } from 'antd';
+import { Router, Route, Redirect, IndexRoute, Link } from "react-router-dom";
 
 
 const mapStateToProps = (state, ownProps) => {
     return {
-      articals: state.articals ? state.articals : {},
-      visitorsMount: state.visitors ? state.visitors : {},
+        articals: state.articals ? state.articals : {},
+        visitorsMount: state.visitors ? state.visitors : {},
     }
-  }
-  
-  const mapDispatchToProps = (dispatch, ownProps) => {
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-      fetchList: (value) => {
-        dispatch({ type: 'visitors:fetchList', payload: value })
-      }
+        fetchList: (value) => {
+            dispatch({ type: 'visitors:fetchList', payload: value })
+        }
     }
-  }
+}
 
 class Head extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          currentPage: 1,
-          pageSize: 10,
-          current: 'mail'
+            currentPage: 1,
+            pageSize: 10,
+            current: 'mail'
         }
-      }
+    }
 
-      fetchList = () => {
+    fetchList = () => {
         this.props.fetchList()
-      }
-    
-      componentDidMount() {
+    }
+
+    componentDidMount() {
         this.fetchList()
-      }
+    }
 
     render() {
         const articalsLength = this.props.articals.totalRows || 0
@@ -58,8 +59,12 @@ class Head extends React.Component {
         </span>
                     </div>
                     <div className={styles.icon}>
-                        <Icon type="github" className={styles.iconItem} />
-                        <Icon type="qq" className={styles.iconItem} />
+                        <a href="https://github.com/xzzdll" target="_blank">
+                            <Icon type="github" className={styles.iconItem} />
+                        </a>
+                        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=634408262&website=www.oicqzone.com" target="_blank">
+                            <Icon type="qq" className={styles.iconItem} />
+                        </a>
                     </div>
                 </div>
                 <div className={styles.card}>
