@@ -39,13 +39,13 @@ class Head extends React.Component {
                             mode="horizontal"
                         >
                             <Menu.Item key="artical">
-                                <Icon type="appstore" />文章
+                                <Icon type="book" />文章
       </Menu.Item>
                             <Menu.Item key="say">
-                                <Icon type="appstore" />说说
+                                <Icon type="smile" />说说
       </Menu.Item>
                             <Menu.Item key="collect">
-                                <Icon type="alipay" />归档
+                                <Icon type="folder-open" />归档
       </Menu.Item>
                         </Menu>
                     </Col>
