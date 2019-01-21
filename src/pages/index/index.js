@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styles from './index.scss';
-import Button from 'antd/lib/button';
+// import Button from 'antd/lib/button';
+import { Button, Pagination } from 'antd';
 import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
@@ -42,10 +43,21 @@ class App extends Component {
     this.fetchList()
   }
 
+  onShowSizeChange = (current, pageSize) => {
+    this.setState({
+      currentPage: current,
+      pageSize
+    }, () => {
+      // window.scrollTo(0,0)
+      this.fetchList()
+    });
+  }
+
   render() {
     const list = this.props.articals.list || []
+    const totalRows = this.props.articals.totalRows || 0
     return (
-      <div>
+      <div className={styles.main}>
         {list.map((x, index) =>
           <div className={styles.articalCard} key={index}>
             <div className={styles.articalCardTitle}>{x.title}</div>
@@ -62,8 +74,7 @@ class App extends Component {
             </div>
           </div>
         )}
-        {/* <el-pagination v-show="pageShow" :small=true @size-change="handleSizeChange" @current-change="handleCurrentChange" class="z-pagination" :current-page.sync="currentPage" :page-size="pageSize" layout="sizes,prev, pager, next" :total="totalRows">
-        </el-pagination> */}
+        <Pagination showSizeChanger onChange={this.onShowSizeChange} onShowSizeChange={this.onShowSizeChange} defaultCurrent={this.state.currentPage} total={totalRows} />
       </div>
     );
   }

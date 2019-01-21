@@ -8,12 +8,16 @@ import createSagaMiddleware from "redux-saga";
 // import artical from './pages/artical/index';
 import './index.css';
 import './quill.snow.css';
+import './assets/live2d/js/live2d.js';
+import './assets/live2d/css/live2d.css';
 // import 'antd/dist/antd.css'
 import App from './layout/App';
 import createHashHistory from "history/createHashHistory";
 import root from "./models/index";
 import 'antd/dist/antd.css';
 // import antd  from 'antd';
+
+window.loadlive2d('live2d', '/live2d/model/tororo/tororo.model.json');
 
 const history = createHashHistory();
 
