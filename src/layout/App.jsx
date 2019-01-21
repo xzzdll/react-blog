@@ -45,6 +45,15 @@ class App extends Component {
       sidebar: !this.state.sidebar
     });
   }
+
+  componentWillReceiveProps(nextProps){
+
+    //当路由切换时
+    if(this.props.location !== nextProps.location){
+        window.scrollTo(0,0)
+    }
+}
+
   render() {
     const { list } = this.props
     let button = null;

@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^3.11.2",
     "axios": "^0.18.0",
+    "highlight.js": "^9.13.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
