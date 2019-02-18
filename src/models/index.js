@@ -3,8 +3,10 @@ import * as sagaEffects from 'redux-saga/effects'
 
 const context = require.context('./', false, /\.js$/)
 let modules = context.keys().filter(item => item !== './index.js').map(key => context(key))
+
 let reducers = {}
 let sagaList = []
+
 for (let i = 0; i < modules.length; i++) {
   let module = modules[i].default
   reducers[module.name] = module.reducer
