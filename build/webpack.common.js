@@ -66,17 +66,16 @@ exports = {
   },
   optimization: {
     sideEffects: true,
-    //分包技术
     splitChunks: {
-      chunks: 'all',//默认只作用于异步模块，为`all`时对所有模块生效,`initial`对同步模块有效
-      minSize: 30000,//合并前模块文件的体积
-      minChunks: 1,//最少被引用次数
+      chunks: 'all',
+      minSize: 30000,
+      minChunks: 1,
       cacheGroups: {
         common: {
           name: 'common',
           test: /node_modules/,
           chunks: 'initial',
-          priority: -10,//优先级更高
+          priority: -10,
           enforce: true
         },
         styles: {
