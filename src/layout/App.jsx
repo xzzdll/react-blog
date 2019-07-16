@@ -74,12 +74,8 @@ class App extends Component {
             <div className={styles.main}>
               <Row type="flex" justify="center">
                 <Col md={14} sm={24} xs={24}>
-                  {/* <Redirect to="/index" /> */}
-                  {/* <Route path="/index" component={index} /> */}
-                  {/* <Route path="/artical" component={index} /> */}
-                  <Route path="/detail/:id" component={artical} />
-                  <Route path="/say" component={say} />
-                  <Route path="/collect" component={timeFile} />
+                  <Redirect to="/index" /> */}
+                  <Route path="/index" component={index} />
                 </Col>
               </Row>
             </div>
