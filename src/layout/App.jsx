@@ -66,11 +66,7 @@ class App extends Component {
     return (
       <div>
         <div className={styles.App} style={{ right: this.state.sidebar ? '160px' : '0px', width: '100%' }}>
-        {/* <Layout> */}
-          {/* <Header> */}
             <Head></Head>
-          {/* </Header> */}
-          {/* <Content> */}
             <div className={styles.main}>
               <Row type="flex" justify="center">
                 <Col md={14} sm={24} xs={24}>
@@ -83,11 +79,7 @@ class App extends Component {
                 </Col>
               </Row>
             </div>
-          {/* </Content> */}
-          {/* <Footer> */}
             <Foot></Foot>
-            {/* </Footer> */}
-          {/* </Layout> */}
         </div>
         <div className={styles.side} style={{ right: this.state.sidebar ? '0' : '-320px' }}>
           <Siderbar></Siderbar>

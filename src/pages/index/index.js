@@ -27,7 +27,7 @@ function App({ history }) {
     setCurrentPage(current)
   }
   useEffect(() => { fetchList()},[])
-  useEffect(() => { fetchList() }, [current, pageSize])
+  useEffect(() => { fetchList() }, [currentPage, pageSize])
   return (
     <div className={styles.main}>
       {list.map((x, index) =>

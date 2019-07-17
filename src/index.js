@@ -31,7 +31,6 @@ render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App} >
-        {/* <IndexRoute component={artical} /> */}
       </Route>
     </Router>
   </Provider >,
