@@ -46,13 +46,13 @@ class App extends Component {
     });
   }
 
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps) {
 
     //当路由切换时
-    if(this.props.location !== nextProps.location){
-        window.scrollTo(0,0)
+    if (this.props.location !== nextProps.location) {
+      window.scrollTo(0, 0)
     }
-}
+  }
 
   render() {
     const { list } = this.props
@@ -66,20 +66,20 @@ class App extends Component {
     return (
       <div>
         <div className={styles.App} style={{ right: this.state.sidebar ? '160px' : '0px', width: '100%' }}>
-            <Head></Head>
-            <div className={styles.main}>
-              <Row type="flex" justify="center">
-                <Col md={14} sm={24} xs={24}>
-                  <Redirect to="/index" />
-                  <Route path="/index" component={index} />
-                  <Route path="/artical" component={index} />
-                  <Route path="/detail/:id" component={artical} />
-                  <Route path="/say" component={say} />
-                  <Route path="/collect" component={timeFile} />
-                </Col>
-              </Row>
-            </div>
-            <Foot></Foot>
+          <Head></Head>
+          <div className={styles.main}>
+            <Row type="flex" justify="center">
+              <Col md={14} sm={24} xs={24}>
+                <Redirect to="/index" />
+                <Route path="/index" component={index} />
+                <Route path="/artical" component={index} />
+                <Route path="/detail/:id" component={artical} />
+                <Route path="/say" component={say} />
+                <Route path="/collect" component={timeFile} />
+              </Col>
+            </Row>
+          </div>
+          <Foot></Foot>
         </div>
         <div className={styles.side} style={{ right: this.state.sidebar ? '0' : '-320px' }}>
           <Siderbar></Siderbar>

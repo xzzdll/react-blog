@@ -12,7 +12,7 @@ import './assets/live2d/js/live2d.js';
 import './assets/live2d/css/live2d.css';
 // import 'antd/dist/antd.css'
 import App from './layout/App';
-import createHashHistory from "history/createHashHistory";
+import { createHashHistory } from "history";
 import root from "./models/index";
 import 'antd/dist/antd.css';
 // import antd  from 'antd';
