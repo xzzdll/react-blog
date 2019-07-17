@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styles from './index.scss';
 import { Menu, Icon, Row, Col  } from 'antd';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
+// import { withRouter } from 'react-router';
 
 class Head extends React.Component {
     state = {
