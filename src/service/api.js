@@ -5,7 +5,7 @@ import qs from 'qs';
 axios.defaults.timeout = 5000;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 // axios.defaults.baseURL = 'http://127.0.0.1:3000/';
-axios.defaults.baseURL = 'http://xzzdll.cn/api/';
+axios.defaults.baseURL = "api/";
 axios.defaults.withCredentials = true;
 
 // POST传参序列化，请求拦截器

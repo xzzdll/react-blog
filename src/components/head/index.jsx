@@ -29,7 +29,7 @@ class Head extends React.Component {
                     <Col md={8} xs={24} sm={24}>
                         <div className={styles.combinedBar}></div>
                         <div className={styles.logo} onClick={this.handleClick1}>
-                            xzzdll Blog
+                            John‘s blog
       </div>
                     </Col>
                     <Col className={styles.menu} md={10} xs={24} sm={24}>
